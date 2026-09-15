@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "python": "3.10",
+  "local_artifact_root": ".artifacts",
+  "datasets": {
+    "wiki_ner": {
+      "reconstruction": "official_conll_splits",
+      "materialized_root": ".artifacts/datasets/wiki_ner",
+      "expected_counts": {"train": 17967, "eval": 1000, "test": 1000}
+    },
+    "twitter_ner": {
+      "scope": "domain_shift_only",
+      "reconstruction": "researcher_obtained_text_plus_public_ids",
+      "split_ids_root": "datasets/domain_shift/twitter_ner/split_ids",
+      "materialized_root": ".artifacts/datasets/twitter_ner",
+      "expected_counts": {"train": 1347, "eval": 292, "test": 286}
+    }
+  },
+  "encoders": [
+    {
+      "slug": "berturk",
+      "model": "dbmdz/bert-base-turkish-cased",
+      "revision": "b6e1de16c983e0f2c70664591ea3f22810072608"
+    },
+    {
+      "slug": "distilberturk",
+      "model": "dbmdz/distilbert-base-turkish-cased",
+      "revision": "8ecd4d034c2612d4c5940795b4f2552a9f3543d6"
+    }
+  ],
+  "encoder_training": {
+    "seeds": [42, 43, 44, 45, 46],
+    "epochs": 3,
+    "batch_size": 16,
+    "learning_rate": 0.00002,
+    "weight_decay": 0.0,
+    "gradient_accumulation_steps": 1,
+    "warmup_ratio": 0.0,
+    "warmup_steps": 0,
+    "lr_scheduler_type": "linear",
+    "max_grad_norm": 1.0,
+    "max_steps": -1,
+    "max_length": 512,
+    "eval_strategy": "epoch",
+    "save_strategy": "epoch",
+    "logging_strategy": "epoch",
+    "save_total_limit": 2,
+    "dataloader_workers": 0,
+    "resume": "auto",
+    "deterministic": true
+  },
+  "wiki_experiment": {
+    "matrix_config": "comparison-wrapper/wiki_http_exact_matrix.json",
+    "reporting_cohort": "configs/reporting_cohort.json",
+    "primary_encoder_seed": 42,
+    "expected_execution_rows": 81,
+    "expected_reported_rows": 81,
+    "test_split": "test",
+    "test_examples": 1000
+  },
+  "domain_shift": {
+    "primary_profile": "conservative",
+    "sensitivity_profiles": ["extended_safe", "extended_risky", "strict_direct_overlap"],
+    "split": "test",
+    "cells": ["wiki_to_wiki", "wiki_to_twitter", "twitter_to_twitter", "twitter_to_wiki"],
+    "expected_primary_runs": 40,
+    "expected_mapping_ablation_runs": 30,
+    "expected_total_runs": 70
+  },
+  "reproducibility_note": "The executable and reported Wiki matrices contain all 81 completed rows, including all seven Trendyol configurations. The repository distributes code, configuration, domain-shift Twitter identifiers, and aggregate reference results only. Dataset records and trained weights are reconstructed locally and remain ignored. Deterministic controls and immutable base-model revisions are used, but hardware and library differences can prevent bit-identical outputs."
+}

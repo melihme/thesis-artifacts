@@ -1,0 +1,6 @@
+{
+  "runtime_device": "cpu",
+  "torch": "2.11.0",
+  "environment_completeness": "partial",
+  "note": "The source evaluation JSON retained the runtime device and Torch version. Reproductions should run the environment-capture stage to record Python, operating system, packages, and hardware."
+}

@@ -1,0 +1,155 @@
+{
+  "protocol": {
+    "scoring": "exact_token_span_v1",
+    "latency": "localhost_http_batch1_concurrency1_v1",
+    "result_schema": "wiki_http_exact_matrix_v1"
+  },
+  "dataset": {
+    "name": "wiki_ner",
+    "source_root": ".artifacts/datasets/wiki_ner",
+    "materialized_data_root": ".artifacts/datasets",
+    "expected_test_count": 1000
+  },
+  "measurement": {
+    "warmup_count": 20,
+    "concurrency": 1,
+    "batch_size": 1,
+    "request_order": "stored_test_order",
+    "automatic_retries": 0
+  },
+  "bert_server": {
+    "host": "127.0.0.1",
+    "port": 8100,
+    "startup_timeout_seconds": 300,
+    "request_timeout_seconds": 120,
+    "max_length": 512,
+    "device_profiles": [
+      {
+        "slug": "cpu",
+        "device": "cpu",
+        "dtype": "float32"
+      },
+      {
+        "slug": "gpu",
+        "device": "cuda",
+        "dtype": "float32",
+        "required_gpu_name_substring": "A100"
+      }
+    ]
+  },
+  "llm_server": {
+    "host": "127.0.0.1",
+    "port": 8000,
+    "startup_timeout_seconds": 1800,
+    "request_timeout_seconds": 240,
+    "hf_home": ".cache/huggingface",
+    "gpu_memory_utilization": 0.9,
+    "max_model_len": 2048,
+    "max_num_seqs": 1,
+    "dtype": "auto",
+    "trust_remote_code": false,
+    "enable_prefix_caching": false,
+    "use_flashinfer_sampler": false,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "disable_thinking": true
+  },
+  "transformers": [
+    {
+      "slug": "dbmdz-bert-base-turkish-cased-wiki-tuned",
+      "model": "dbmdz/bert-base-turkish-cased",
+      "model_dir": ".artifacts/models/bert/seed-42/wiki_ner/berturk"
+    },
+    {
+      "slug": "dbmdz-distilbert-base-turkish-cased-wiki-tuned",
+      "model": "dbmdz/distilbert-base-turkish-cased",
+      "model_dir": ".artifacts/models/bert/seed-42/wiki_ner/distilberturk"
+    }
+  ],
+  "strategies": [
+    {
+      "name": "zero-shot",
+      "few_shot_count": 0,
+      "seed_mode": "fixed"
+    },
+    {
+      "name": "one-shot",
+      "few_shot_count": 1,
+      "seed_mode": "demonstration"
+    },
+    {
+      "name": "three-shot",
+      "few_shot_count": 3,
+      "seed_mode": "demonstration"
+    }
+  ],
+  "models": [
+    {
+      "slug": "qwen3-0.6b",
+      "model": "Qwen/Qwen3-0.6B",
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca"
+    },
+    {
+      "slug": "gemma-3-4b-it",
+      "model": "google/gemma-3-4b-it",
+      "revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+      "server": {"dtype": "bfloat16"}
+    },
+    {
+      "slug": "phi-4-mini-instruct",
+      "model": "microsoft/Phi-4-mini-instruct",
+      "revision": "cfbefacb99257ffa30c83adab238a50856ac3083"
+    },
+    {
+      "slug": "qwen3.5-2b",
+      "model": "Qwen/Qwen3.5-2B",
+      "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc"
+    },
+    {
+      "slug": "qwen3-1.7b",
+      "model": "Qwen/Qwen3-1.7B",
+      "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+    },
+    {
+      "slug": "qwen3-4b",
+      "model": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+    },
+    {
+      "slug": "qwen3-8b",
+      "model": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "server": {"dtype": "bfloat16"}
+    },
+    {
+      "slug": "qwen3-14b",
+      "model": "Qwen/Qwen3-14B",
+      "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "server": {"dtype": "bfloat16"}
+    },
+    {
+      "slug": "gemma-3-12b-it",
+      "model": "google/gemma-3-12b-it",
+      "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "server": {"dtype": "bfloat16"}
+    },
+    {
+      "slug": "aya-expanse-8b",
+      "model": "CohereLabs/aya-expanse-8b",
+      "revision": "5062468bf9bc0c6035fd64e06274333ec127d980",
+      "server": {"dtype": "bfloat16"}
+    },
+    {
+      "slug": "trendyol-llm-7b-chat-v4.1.0",
+      "model": "Trendyol/Trendyol-LLM-7B-chat-v4.1.0",
+      "revision": "8d8006bc658442b53470b9ef51db0c12b10402a0",
+      "server": {"dtype": "bfloat16"}
+    }
+  ],
+  "comparison": {
+    "split": "test",
+    "demonstration_seeds": [42, 1771, 2401],
+    "zero_shot_seed": 42,
+    "output_dir": ".artifacts/results/wiki_ner_http_exact_v1"
+  }
+}

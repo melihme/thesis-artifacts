@@ -1,0 +1,12 @@
+{
+  "python": "3.10.12",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_memory_mib": 40960,
+  "nvidia_driver": "580.82.07",
+  "vllm": "0.29.0",
+  "vllm_use_flashinfer_sampler": false,
+  "requirements_sha256": "77afd1d1da86c1f4d529f1ae867edc9ec3e5f6cd543482f0aade43e5e8495a8a",
+  "requirements_vllm_sha256": "d7728106e3e0176d59482c1c4cf436af7b00faa92fd3aeda7783d92e18cd45ba",
+  "note": "This records the source Wiki run. Reproductions should capture their own environment under .artifacts."
+}

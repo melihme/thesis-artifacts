@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this reproduction code, please cite the thesis and this repository."
+title: "Reproducibility Code for WikiNER Model Comparison and Turkish NER Domain Shift"
+type: software
+license: Apache-2.0
+authors:
+  - family-names: "Taşdizen"
+    given-names: "Melih"
+repository-code: "https://github.com/melihme/thesis-artifacts"

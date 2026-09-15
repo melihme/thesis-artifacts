@@ -1,0 +1,161 @@
+{
+  "protocol": {
+    "scoring": "exact_token_span_v1",
+    "latency": "localhost_http_batch1_concurrency1_v1",
+    "result_schema": "wiki_http_exact_matrix_v1"
+  },
+  "config_sha256": "7b010af7f55c8100cb8b8079da5092642dd98cf81f9bd799ed63bc1f86cc23cb",
+  "dataset": {
+    "name": "wiki_ner",
+    "expected_test_count": 1000,
+    "materialized_split_sha256": {
+      "train.jsonl": "666c17c660fe5abdc45861c5e8338cef15eeeec9687d91d01648e8af0b48f55d",
+      "eval.jsonl": "50d4d6733a821004da917ecbe018acbb230e6afddfca38e4938edafcf5eb891a",
+      "test.jsonl": "26ddf793f88e25591810ea6c4366f91a4b0ff851eaf6d7dd6b0fc28ed6275a57"
+    }
+  },
+  "measurement": {
+    "warmup_count": 20,
+    "concurrency": 1,
+    "batch_size": 1,
+    "request_order": "stored_test_order",
+    "automatic_retries": 0
+  },
+  "bert_server": {
+    "host": "127.0.0.1",
+    "port": 8100,
+    "startup_timeout_seconds": 300,
+    "request_timeout_seconds": 120,
+    "max_length": 512,
+    "device_profiles": [
+      {
+        "slug": "cpu",
+        "device": "cpu",
+        "dtype": "float32"
+      },
+      {
+        "slug": "gpu",
+        "device": "cuda",
+        "dtype": "float32",
+        "required_gpu_name_substring": "A100"
+      }
+    ]
+  },
+  "python": "3.10.12",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+  "environment": {
+    "nvidia_smi": "NVIDIA A100-SXM4-40GB, GPU-cfef88d5-699d-274c-2867-b1deb3d69ef2, 580.82.07, 40960 MiB",
+    "requirements_sha256": "77afd1d1da86c1f4d529f1ae867edc9ec3e5f6cd543482f0aade43e5e8495a8a",
+    "requirements_vllm_sha256": "d7728106e3e0176d59482c1c4cf436af7b00faa92fd3aeda7783d92e18cd45ba"
+  },
+  "models": [
+    {
+      "slug": "qwen3-0.6b",
+      "model": "Qwen/Qwen3-0.6B"
+    },
+    {
+      "slug": "gemma-3-4b-it",
+      "model": "google/gemma-3-4b-it",
+      "server": {
+        "dtype": "bfloat16"
+      }
+    },
+    {
+      "slug": "phi-4-mini-instruct",
+      "model": "microsoft/Phi-4-mini-instruct"
+    },
+    {
+      "slug": "qwen3.5-2b",
+      "model": "Qwen/Qwen3.5-2B"
+    },
+    {
+      "slug": "qwen3-1.7b",
+      "model": "Qwen/Qwen3-1.7B"
+    },
+    {
+      "slug": "qwen3-4b",
+      "model": "Qwen/Qwen3-4B"
+    },
+    {
+      "slug": "qwen3-8b",
+      "model": "Qwen/Qwen3-8B",
+      "server": {
+        "dtype": "bfloat16"
+      }
+    },
+    {
+      "slug": "qwen3-14b",
+      "model": "Qwen/Qwen3-14B",
+      "server": {
+        "dtype": "bfloat16"
+      }
+    },
+    {
+      "slug": "gemma-3-12b-it",
+      "model": "google/gemma-3-12b-it",
+      "server": {
+        "dtype": "bfloat16"
+      }
+    },
+    {
+      "slug": "aya-expanse-8b",
+      "model": "CohereLabs/aya-expanse-8b",
+      "server": {
+        "dtype": "bfloat16"
+      }
+    },
+    {
+      "slug": "trendyol-llm-7b-chat-v4.1.0",
+      "model": "Trendyol/Trendyol-LLM-7B-chat-v4.1.0",
+      "server": {
+        "dtype": "bfloat16"
+      }
+    }
+  ],
+  "transformers": [
+    {
+      "slug": "dbmdz-bert-base-turkish-cased-wiki-tuned",
+      "model": "dbmdz/bert-base-turkish-cased"
+    },
+    {
+      "slug": "dbmdz-distilbert-base-turkish-cased-wiki-tuned",
+      "model": "dbmdz/distilbert-base-turkish-cased"
+    }
+  ],
+  "transformer_artifact_checksums": [
+    {
+      "slug": "dbmdz-bert-base-turkish-cased-wiki-tuned",
+      "model_safetensors_sha256": "5b75c6938b53a49e02825e7611246f65348b834d032b857f5d411273826813ec",
+      "config_sha256": "c763215df87327b4d5785b364c06b95d7b4539414b1158f0789eeb9e881ff5aa",
+      "tokenizer_sha256": "65ef5a17a6dd815398d703d17a66a3ca5e1c87dd89baf69cba64f108f16a3cbd"
+    },
+    {
+      "slug": "dbmdz-distilbert-base-turkish-cased-wiki-tuned",
+      "model_safetensors_sha256": "6d4c5114374f68bea8a972dd9976cabada886c2e7861f2785758a98acd4fc66c",
+      "config_sha256": "2765549b2bdc559b52ee80814b4933eec06c524e0735fc7cf054b403d3f7ab51",
+      "tokenizer_sha256": "65ef5a17a6dd815398d703d17a66a3ca5e1c87dd89baf69cba64f108f16a3cbd"
+    }
+  ],
+  "strategies": [
+    {
+      "name": "zero-shot",
+      "few_shot_count": 0,
+      "seed_mode": "fixed"
+    },
+    {
+      "name": "one-shot",
+      "few_shot_count": 1,
+      "seed_mode": "demonstration"
+    },
+    {
+      "name": "three-shot",
+      "few_shot_count": 3,
+      "seed_mode": "demonstration"
+    }
+  ],
+  "demonstration_seeds": [
+    42,
+    1771,
+    2401
+  ]
+}

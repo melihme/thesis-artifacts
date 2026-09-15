@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "policy": "No dataset content is distributed. WikiNER is obtained from its public repository and materialized from its official splits. For domain-shift reproduction only, Twitter text is obtained separately and filtered/reordered using the distributed post IDs.",
+  "datasets": {
+    "wiki_ner": {
+      "title": "Turkish Wiki NER Dataset",
+      "repository": "https://github.com/turkish-nlp-suite/Turkish-Wiki-NER-Dataset",
+      "citation": "https://aclanthology.org/2023.acl-long.768/",
+      "license_reference": "https://github.com/turkish-nlp-suite/Turkish-Wiki-NER-Dataset/blob/main/LICENSE",
+      "acquisition": "Clone or download the upstream repository. Pass the directory containing train.conll, dev.conll, and test.conll as WIKI_SOURCE_DIR.",
+      "recorded_source_revision": null,
+      "snapshot_identity": "The original experiment archive did not retain Git metadata; the source-file hashes below identify the thesis snapshot.",
+      "expected_selected_counts": {"train": 17967, "eval": 1000, "test": 1000},
+      "source_files": {
+        "train": {"basename": "train.conll", "sha256": "9d2a0908be5882c7db199177131f77b74ad5a3e6f1cfdd99e20858b06658040f"},
+        "eval": {"basename": "dev.conll", "sha256": "30b0a4c7742977f28f16a1409a0ae45a95b3100ba0b7986fb53ce0be04b37bf5"},
+        "test": {"basename": "test.conll", "sha256": "d1abd618f844b07e39963c6804c5e36707ebe3d37ff4a9040c3c08e36d99d795"}
+      }
+    },
+    "twitter_ner": {
+      "scope": "domain_shift_only",
+      "title": "SUNLP Turkish Twitter NER Dataset",
+      "repository": "https://github.com/SU-NLP/SUNLP-Twitter-NER-Dataset",
+      "citation": "https://aclanthology.org/2022.lrec-1.484/",
+      "license_reference": "https://github.com/SU-NLP/SUNLP-Twitter-NER-Dataset/blob/main/LICENSE",
+      "acquisition": "For the domain-shift experiment, obtain the source annotations and permitted post text. Place train_with_tweet_text.tsv, val_with_tweet_text.tsv, and test_with_tweet_text.tsv under TWITTER_SOURCE_DIR. The public ID files select and order the domain-shift subset.",
+      "recorded_source_revision": null,
+      "snapshot_identity": "The thesis used locally recovered post text. The augmented-source hashes and public post IDs identify the intended snapshot.",
+      "id_scheme": "Domain-shift Twitter post identifier from the source annotation.",
+      "split_ids_root": "datasets/domain_shift/twitter_ner/split_ids",
+      "expected_selected_counts": {"train": 1347, "eval": 292, "test": 286},
+      "source_files": {
+        "train": {"basename": "train_with_tweet_text.tsv", "sha256": "706a3951dd15f1cae2a71d087b8bec1b6741cfe49b9a94a66cae5629c572972b"},
+        "eval": {"basename": "val_with_tweet_text.tsv", "sha256": "b802cdd3089a7cdcd52f57f8253224ea65a440c06bc3eb7ba32fc2b139d08c38"},
+        "test": {"basename": "test_with_tweet_text.tsv", "sha256": "114bf96cf21829c6c074b06387d44fc2e40a7c54e0d3e45fc9b880fa01b4b459"}
+      },
+      "availability_warning": "Deleted or changed posts can prevent exact reconstruction. Missing required IDs must be reported as a non-equivalent reproduction."
+    }
+  }
+}

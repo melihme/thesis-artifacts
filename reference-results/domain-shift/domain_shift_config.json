@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "model_families": [
+    {"slug": "berturk", "model": "dbmdz/bert-base-turkish-cased", "revision": "b6e1de16c983e0f2c70664591ea3f22810072608"},
+    {"slug": "distilberturk", "model": "dbmdz/distilbert-base-turkish-cased", "revision": "8ecd4d034c2612d4c5940795b4f2552a9f3543d6"}
+  ],
+  "seeds": [42, 43, 44, 45, 46],
+  "training": {
+    "epochs": 3,
+    "batch_size": 16,
+    "learning_rate": 0.00002,
+    "weight_decay": 0.0,
+    "max_length": 512,
+    "deterministic": true
+  },
+  "primary_profile": "conservative",
+  "sensitivity_profiles": ["extended_safe", "extended_risky", "strict_direct_overlap"],
+  "cells": ["wiki_to_wiki", "wiki_to_twitter", "twitter_to_twitter", "twitter_to_wiki"],
+  "test_counts": {"wiki_ner": 1000, "twitter_ner": 286},
+  "expected_runs": {"primary": 40, "mapping_sensitivity": 30, "total": 70}
+}

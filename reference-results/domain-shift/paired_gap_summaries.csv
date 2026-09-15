@@ -1,0 +1,7 @@
+family,profile,metric,formula,seeds,f1_points_n,f1_points_mean,f1_points_std,f1_points_min,f1_points_max
+berturk,conservative,domain_transfer_gap,F1(wiki_to_wiki) - F1(wiki_to_twitter),42;43;44;45;46,5,0.2742951759479876,0.006402788090994262,0.26363325925220993,0.2809518464474128
+berturk,conservative,target_adaptation_gain,F1(twitter_to_twitter) - F1(wiki_to_twitter),42;43;44;45;46,5,0.1343880511637953,0.011148891482373347,0.1211524861673583,0.15158106427456275
+berturk,conservative,reverse_transfer_gap,F1(twitter_to_twitter) - F1(twitter_to_wiki),42;43;44;45;46,5,0.2167754969041454,0.02187389970731128,0.19201799321972868,0.2431807263054363
+distilberturk,conservative,domain_transfer_gap,F1(wiki_to_wiki) - F1(wiki_to_twitter),42;43;44;45;46,5,0.31261209081302804,0.009530697316752403,0.3014692602225111,0.3229745416267114
+distilberturk,conservative,target_adaptation_gain,F1(twitter_to_twitter) - F1(wiki_to_twitter),42;43;44;45;46,5,0.009281160889163365,0.017748369406203435,-0.01787551440329227,0.0312245558269601
+distilberturk,conservative,reverse_transfer_gap,F1(twitter_to_twitter) - F1(twitter_to_wiki),42;43;44;45;46,5,0.25624631479494364,0.03444606514240816,0.2014527122157424,0.2848496084016092

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "source": "Resolved Hugging Face commits recorded by the completed Wiki run and fixed encoder configuration.",
+  "llms": [
+    {"slug": "qwen3-0.6b", "model": "Qwen/Qwen3-0.6B", "revision": "c1899de289a04d12100db370d81485cdf75e47ca"},
+    {"slug": "gemma-3-4b-it", "model": "google/gemma-3-4b-it", "revision": "093f9f388b31de276ce2de164bdc2081324b9767"},
+    {"slug": "phi-4-mini-instruct", "model": "microsoft/Phi-4-mini-instruct", "revision": "cfbefacb99257ffa30c83adab238a50856ac3083"},
+    {"slug": "qwen3.5-2b", "model": "Qwen/Qwen3.5-2B", "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc"},
+    {"slug": "qwen3-1.7b", "model": "Qwen/Qwen3-1.7B", "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"},
+    {"slug": "qwen3-4b", "model": "Qwen/Qwen3-4B", "revision": "1cfa9a7208912126459214e8b04321603b3df60c"},
+    {"slug": "qwen3-8b", "model": "Qwen/Qwen3-8B", "revision": "b968826d9c46dd6066d109eabc6255188de91218"},
+    {"slug": "qwen3-14b", "model": "Qwen/Qwen3-14B", "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18"},
+    {"slug": "gemma-3-12b-it", "model": "google/gemma-3-12b-it", "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80"},
+    {"slug": "aya-expanse-8b", "model": "CohereLabs/aya-expanse-8b", "revision": "5062468bf9bc0c6035fd64e06274333ec127d980"},
+    {"slug": "trendyol-llm-7b-chat-v4.1.0", "model": "Trendyol/Trendyol-LLM-7B-chat-v4.1.0", "revision": "8d8006bc658442b53470b9ef51db0c12b10402a0"}
+  ],
+  "encoders": [
+    {"slug": "berturk", "model": "dbmdz/bert-base-turkish-cased", "revision": "b6e1de16c983e0f2c70664591ea3f22810072608"},
+    {"slug": "distilberturk", "model": "dbmdz/distilbert-base-turkish-cased", "revision": "8ecd4d034c2612d4c5940795b4f2552a9f3543d6"}
+  ]
+}

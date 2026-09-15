@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "experiment": "wiki_http_exact_v1",
+  "selection_rule": "All completed rows from the fixed WikiNER matrix are included.",
+  "included_llm_slugs": [
+    "qwen3-0.6b",
+    "gemma-3-4b-it",
+    "phi-4-mini-instruct",
+    "qwen3.5-2b",
+    "qwen3-1.7b",
+    "qwen3-4b",
+    "qwen3-8b",
+    "qwen3-14b",
+    "gemma-3-12b-it",
+    "aya-expanse-8b",
+    "trendyol-llm-7b-chat-v4.1.0"
+  ],
+  "included_transformer_slugs": [
+    "dbmdz-bert-base-turkish-cased-wiki-tuned",
+    "dbmdz-distilbert-base-turkish-cased-wiki-tuned"
+  ],
+  "excluded_result_models": [],
+  "expected_rows": {"llm": 77, "transformer": 4, "total": 81}
+}

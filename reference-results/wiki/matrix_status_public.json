@@ -1,0 +1,15 @@
+{
+  "reported_cohort": {
+    "completed": 81,
+    "pending": 0,
+    "expected_rows": 81
+  },
+  "source_matrix_at_freeze": {
+    "completed": 81,
+    "pending": 0,
+    "expected_rows": 81
+  },
+  "excluded_rows": 0,
+  "scoring_protocol": "exact_token_span_v1",
+  "latency_protocol": "localhost_http_batch1_concurrency1_v1"
+}

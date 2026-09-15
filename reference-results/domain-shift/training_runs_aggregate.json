@@ -1,0 +1,204 @@
+{
+  "runs": [
+    {
+      "status": "trained",
+      "seed": 42,
+      "dataset_name": "wiki",
+      "model_family": "berturk",
+      "source_model": "dbmdz/bert-base-turkish-cased",
+      "test_f1": 0.8005987028105771,
+      "train_seconds": 1746.346433877945,
+      "wall_seconds": 1766.814699249997
+    },
+    {
+      "status": "trained",
+      "seed": 42,
+      "dataset_name": "wiki",
+      "model_family": "distilberturk",
+      "source_model": "dbmdz/distilbert-base-turkish-cased",
+      "test_f1": 0.7481966113068278,
+      "train_seconds": 877.6842591762543,
+      "wall_seconds": 887.9795955840018
+    },
+    {
+      "status": "trained",
+      "seed": 42,
+      "dataset_name": "twitter",
+      "model_family": "berturk",
+      "source_model": "dbmdz/bert-base-turkish-cased",
+      "test_f1": 0.7144886363636364,
+      "train_seconds": 236.17002511024475,
+      "wall_seconds": 244.2085106250015
+    },
+    {
+      "status": "trained",
+      "seed": 42,
+      "dataset_name": "twitter",
+      "model_family": "distilberturk",
+      "source_model": "dbmdz/distilbert-base-turkish-cased",
+      "test_f1": 0.5075075075075075,
+      "train_seconds": 121.0843939781189,
+      "wall_seconds": 125.73950108400459
+    },
+    {
+      "status": "trained",
+      "seed": 43,
+      "dataset_name": "wiki",
+      "model_family": "berturk",
+      "source_model": "dbmdz/bert-base-turkish-cased",
+      "test_f1": 0.7979360852197069,
+      "train_seconds": 1597.5202941894531,
+      "wall_seconds": 1613.937240166997
+    },
+    {
+      "status": "trained",
+      "seed": 43,
+      "dataset_name": "wiki",
+      "model_family": "distilberturk",
+      "source_model": "dbmdz/distilbert-base-turkish-cased",
+      "test_f1": 0.7462140123148611,
+      "train_seconds": 807.5081470012665,
+      "wall_seconds": 817.4266967079966
+    },
+    {
+      "status": "trained",
+      "seed": 43,
+      "dataset_name": "twitter",
+      "model_family": "berturk",
+      "source_model": "dbmdz/bert-base-turkish-cased",
+      "test_f1": 0.7143869596031185,
+      "train_seconds": 216.96753001213074,
+      "wall_seconds": 224.70743929200398
+    },
+    {
+      "status": "trained",
+      "seed": 43,
+      "dataset_name": "twitter",
+      "model_family": "distilberturk",
+      "source_model": "dbmdz/distilbert-base-turkish-cased",
+      "test_f1": 0.47411852963240814,
+      "train_seconds": 112.82779431343079,
+      "wall_seconds": 117.02314437500172
+    },
+    {
+      "status": "trained",
+      "seed": 44,
+      "dataset_name": "wiki",
+      "model_family": "berturk",
+      "source_model": "dbmdz/bert-base-turkish-cased",
+      "test_f1": 0.7984018644914268,
+      "train_seconds": 1749.0300552845001,
+      "wall_seconds": 1780.3963450419978
+    },
+    {
+      "status": "trained",
+      "seed": 44,
+      "dataset_name": "wiki",
+      "model_family": "distilberturk",
+      "source_model": "dbmdz/distilbert-base-turkish-cased",
+      "test_f1": 0.7345442426262289,
+      "train_seconds": 919.1031970977783,
+      "wall_seconds": 930.1943439590032
+    },
+    {
+      "status": "trained",
+      "seed": 44,
+      "dataset_name": "twitter",
+      "model_family": "berturk",
+      "source_model": "dbmdz/bert-base-turkish-cased",
+      "test_f1": 0.7245551601423487,
+      "train_seconds": 230.13989233970642,
+      "wall_seconds": 237.8466150000022
+    },
+    {
+      "status": "trained",
+      "seed": 44,
+      "dataset_name": "twitter",
+      "model_family": "distilberturk",
+      "source_model": "dbmdz/distilbert-base-turkish-cased",
+      "test_f1": 0.49850299401197606,
+      "train_seconds": 117.09305715560913,
+      "wall_seconds": 121.50037549999979
+    },
+    {
+      "status": "trained",
+      "seed": 45,
+      "dataset_name": "wiki",
+      "model_family": "berturk",
+      "source_model": "dbmdz/bert-base-turkish-cased",
+      "test_f1": 0.7941522433204504,
+      "train_seconds": 1559.426754951477,
+      "wall_seconds": 1576.8720288750046
+    },
+    {
+      "status": "trained",
+      "seed": 45,
+      "dataset_name": "wiki",
+      "model_family": "distilberturk",
+      "source_model": "dbmdz/distilbert-base-turkish-cased",
+      "test_f1": 0.7342364943970563,
+      "train_seconds": 860.6272869110107,
+      "wall_seconds": 870.5693785420008
+    },
+    {
+      "status": "trained",
+      "seed": 45,
+      "dataset_name": "twitter",
+      "model_family": "berturk",
+      "source_model": "dbmdz/bert-base-turkish-cased",
+      "test_f1": 0.7136812411847673,
+      "train_seconds": 215.5162250995636,
+      "wall_seconds": 223.14241720899736
+    },
+    {
+      "status": "trained",
+      "seed": 45,
+      "dataset_name": "twitter",
+      "model_family": "distilberturk",
+      "source_model": "dbmdz/distilbert-base-turkish-cased",
+      "test_f1": 0.45384615384615384,
+      "train_seconds": 114.44412302970886,
+      "wall_seconds": 118.84943950000161
+    },
+    {
+      "status": "trained",
+      "seed": 46,
+      "dataset_name": "wiki",
+      "model_family": "berturk",
+      "source_model": "dbmdz/bert-base-turkish-cased",
+      "test_f1": 0.7877066978453315,
+      "train_seconds": 1552.5220749378204,
+      "wall_seconds": 1568.6121564999994
+    },
+    {
+      "status": "trained",
+      "seed": 46,
+      "dataset_name": "wiki",
+      "model_family": "distilberturk",
+      "source_model": "dbmdz/distilbert-base-turkish-cased",
+      "test_f1": 0.7373179306880964,
+      "train_seconds": 832.3057961463928,
+      "wall_seconds": 842.7240725000011
+    },
+    {
+      "status": "trained",
+      "seed": 46,
+      "dataset_name": "twitter",
+      "model_family": "berturk",
+      "source_model": "dbmdz/bert-base-turkish-cased",
+      "test_f1": 0.7338028169014085,
+      "train_seconds": 232.68568801879883,
+      "wall_seconds": 240.46096462500282
+    },
+    {
+      "status": "trained",
+      "seed": 46,
+      "dataset_name": "twitter",
+      "model_family": "distilberturk",
+      "source_model": "dbmdz/distilbert-base-turkish-cased",
+      "test_f1": 0.501497005988024,
+      "train_seconds": 121.41497015953064,
+      "wall_seconds": 126.20003108399396
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "experiment": "wiki_http_exact_v1",
+  "selection_rule": "All completed rows from the fixed WikiNER matrix are included.",
+  "included_llm_slugs": [
+    "qwen3-0.6b",
+    "gemma-3-4b-it",
+    "phi-4-mini-instruct",
+    "qwen3.5-2b",
+    "qwen3-1.7b",
+    "qwen3-4b",
+    "qwen3-8b",
+    "qwen3-14b",
+    "gemma-3-12b-it",
+    "aya-expanse-8b",
+    "trendyol-llm-7b-chat-v4.1.0"
+  ],
+  "included_transformer_slugs": [
+    "dbmdz-bert-base-turkish-cased-wiki-tuned",
+    "dbmdz-distilbert-base-turkish-cased-wiki-tuned"
+  ],
+  "excluded_result_models": [],
+  "expected_rows": {
+    "llm": 77,
+    "transformer": 4,
+    "total": 81
+  },
+  "built_at_utc": "2026-09-15T15:48:11.818150+00:00",
+  "source_matrix_rows": 81,
+  "published_rows": 81,
+  "source_files": [
+    "matrix_results.csv",
+    "latency_components.csv",
+    "entity_type_metrics.csv",
+    "bert_cpu_gpu_speedups.csv",
+    "matrix_status.json",
+    "protocol_manifest.json"
+  ]
+}

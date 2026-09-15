@@ -1,0 +1,24 @@
+{
+  "rows": 81,
+  "models": 13,
+  "llm_models": 11,
+  "transformer_models": 2,
+  "rows_by_approach": {
+    "llm_http": 77,
+    "transformer_http": 4
+  },
+  "rows_by_prompt_strategy": {
+    "fine-tuned": 4,
+    "one-shot": 33,
+    "three-shot": 33,
+    "zero-shot": 11
+  },
+  "examples_per_row": 1000,
+  "failed_http_requests": 0,
+  "scoring_protocols": [
+    "exact_token_span_v1"
+  ],
+  "latency_protocols": [
+    "localhost_http_batch1_concurrency1_v1"
+  ]
+}
